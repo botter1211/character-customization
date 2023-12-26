@@ -1,38 +1,115 @@
-.App {
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #30336b;
+  background-image: url(https://flatuicolors.com/static/img/stars-opacity.0979c1.svg);
+}
+.title,
+.subTitle {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 50px;
+  font-weight: 700;
+  color: #0fbcf9;
+  text-shadow: 3px 3px #f53b57;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.subTitle {
+  font-size: 40px;
+  font-weight: 700;
+  text-shadow: 3px 3px #0fbcf9;
+  color: #f53b57;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.divine {
+  width: 50%;
+  margin: 10px auto;
+  border-bottom: 10px solid rosybrown;
+}
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 40px;
+}
+.avatar-wrapper {
+  position: sticky;
+  top: 200px;
+  padding: 50px;
+  border: 10px solid #686de0;
+  border-radius: 20px;
+  background-color: #d2dae2;
+}
+.avatar {
+  position: relative;
+  width: 250px;
+  height: 260px;
+}
+.avatar img {
+  width: 100%;
+  position: absolute;
+}
+.partList {
+  max-width: 700px;
+  text-align: center;
+}
+.partList h2 {
+  color: #d2dae2;
+}
+.list {
+  border-radius: 10px;
+  border: 5px solid #f6e58d;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  background-color: rgba(126, 126, 255, 0.4);
+}
+.clickItem {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border: 2px solid #686de0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.clickItem:hover {
+  background-color: #ef5777;
+  cursor: pointer;
+}
+.clickItem img {
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.selected {
+  background-color: #d2dae2;
+}
+.button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #f53b57;
   color: white;
+  font-weight: 700;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1000px) {
+  .container {
+    align-items: center;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .title {
+    font-size: 35px;
+  }
+  .subTitle {
+    font-size: 25px;
+  }
+  .avatar-wrapper {
+    padding: 0;
   }
 }
